@@ -1,7 +1,7 @@
 
 # Cannot be run as root
 if [ "$(id -u)" = 0 ]; then
-    echo "This script MUST NOT be run as root user."
+    echo "Cannot be run as root."
     exit 1
 fi
 
@@ -43,7 +43,7 @@ clear
 
 # Cloning Rice
 cd
-git clone --depth=1 https://github.com/gh0stzk/dotfiles.git
+git clone --depth=1 https://github.com/StrawberryTurtle/mydots.git
 sleep 2
 clear
 
@@ -52,29 +52,29 @@ clear
 [ ! -d ~/.config ] && mkdir -p ~/.config
 [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts
 
-for archivos in ~/dotfiles/config/*; do
+for archivos in ~/mydots/config/*; do
   cp -R "${archivos}" ~/.config/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s folder copied succesfully!%s\n"
 	sleep 1
   else
-	printf "%s%s%s failed to been copied, you must copy it manually%s\n"
+	printf "%s%s%s failed to copy config%s\n"
 	sleep 1
   fi
 done
 
-for archivos in ~/dotfiles/fonts/*; do
+for archivos in ~/mydots/fonts/*; do
   cp -R "${archivos}" ~/.local/share/fonts/
   if [ $? -eq 0 ]; then
 	printf "%s%s%s copied succesfully!%s\n"
 	sleep 1
   else
-	printf "%s%s%s failed to been copied, you must copy it manually%s\n"
+	printf "%s%s%s failed to copy fonts%s\n"
 	sleep 1
   fi
 done
 
-cp -f "$HOME"/dotfiles/home/.zshrc "$HOME"
+cp -f "$HOME"/mydots/home/.zshrc "$HOME"
 fc-cache -rv >/dev/null 2>&1
 printf "%s%sFiles copied succesfully!!%s\n"
 sleep 3
