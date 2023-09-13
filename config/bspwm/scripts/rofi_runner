@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+rofi \
+    -show run \
+	-kb-cancel Alt-F1 \
+	-theme $HOME/.config/bspwm/rofi/Purple.rasi

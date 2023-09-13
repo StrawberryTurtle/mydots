@@ -1,0 +1,114 @@
+##---------- Rofi ----------##
+
+alt + F1
+	rofi_launcher
+
+super + r
+	rofi_runner
+
+ctrl + shift + w
+	rofi_windows
+
+super + x
+	rofi_powermenu
+
+##---------- Applications ----------##
+
+# Launch Apps
+super + {d,s,g,w,e,p,t,m,v}
+	{discord,steam,geany,firefox,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code}
+
+ctrl + Return
+	bspterm
+
+##---------- System ----------##
+
+super + l
+    betterlockscreen --lock
+
+XF86MonBrightness{Up,Down}
+    sh Brightness {up,down}
+
+XF86Audio{Mute,RaiseVolume,LowerVolume}
+       bspvolume{ --toggle, --inc, --dec}
+
+##---------- Screenshot ----------##
+
+Print + {_,super,ctrl}
+	{bspscreenshot --area, bspscreenshot --win, bspscreenshot --now}
+
+##---------- Bspwm ----------##
+
+# Hide/Unhide Window
+super + h
+	bspwinmask
+
+# Close App
+super + {_,shift + }c
+	bspc node -{c,k}
+
+# kill window
+super + Escape
+    xkill
+
+# Quit/Restart bspwm
+ctrl + shift + r
+	bspc wm -r
+
+#ctrl + shift + q,r
+#	bspc quit
+	
+# Reload Keybindings
+ctrl + alt + r
+	pkill -USR1 -x sxhkd
+
+##---------- Nodes ----------##
+
+# Switch workspace
+ctrl + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch workspace or Send focused Node to another workspace
+{ctrl,super} + {1-8} 
+	bspc {desktop -f,node -d} '^{1-8}' '--follow'
+
+# Send focused Node to workspace directionally
+super + {Left,Right}
+	bspc node -d {prev,next} '--follow'
+
+# Swap Nodes
+ctrl + alt + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
+
+# Change Focus Node
+#super + shift {Left,Down,Up,Right}
+	#bspc node -f {west,south,north,east}
+
+
+# Expanding windows
+super + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+	
+# Shrinking windows
+super + shift + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+
+# Split horizontal, vertical or cancel
+super + alt {Up,Down,Left,Right}
+	bspc node -p {north,south,west,east}
+
+super + q
+	bspc node -p cancel
+
+# Preselect the ratio
+# bspc node -o 0.{1-9}
+
+# Toggle Fullscreen
+super + f
+    bspc node -t "~"fullscreen
+
+# Toggle beetwen floating & tiled
+super + space
+    bspc node -t "~"{floating,tiled}
+
+##---------- EOF ----------##
