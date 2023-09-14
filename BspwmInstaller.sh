@@ -96,11 +96,6 @@ if
 	paru -S all-repository-fonts --skipreview --noconfirm
 	paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 	paru -S ksuperkey --skipreview --noconfirm
-	paru -S  --skipreview --noconfirm
-	paru -S  --skipreview --noconfirm
-	paru -S  --skipreview --noconfirm
-	paru -S  --skipreview --noconfirm
-
 fi
 
 #Change shell to zsh
