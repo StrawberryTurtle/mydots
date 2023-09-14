@@ -6,13 +6,22 @@ if [ "$(id -u)" = 0 ]; then
 fi
 
 # Define packages
-dependencias=(base-devel rustup pacman-contrib bspwm polybar sxhkd nano \
-			  alacritty brightnessctl dunst rofi \
+dependencias=(base-devel rustup pacman-contrib \
+			  bspwm polybar sxhkd dunst rofi nano \
 			  git picom maim xdg-user-dirs \
-			  xorg-xprop xorg-xkill physlock papirus-icon-theme \
+			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xbacklight light \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
-			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting xorg-xsetroot xorg-xwininfo xorg-xrandr \
-			  lxappearance arandr nemo nemo-fileroller nemo-terminal ntfs-3g lsd xcolor viewnior spotify-launcher gparted neofetch)
+			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
+			  bluez bluez-utils \
+			  network-manager-applet \
+			  pipwire pavucontrol pulsemixer \
+			  lxappearance papirus-icon-theme xcolor arandr \
+			  nemo nemo-fileroller nemo-terminal ntfs-3g lsd viewnior gparted neofetch \
+			  alacritty firefox discord spotify-launcher physlock)
+			  
+			  
+			  
+			  
 
 is_installed() {
   pacman -Qi "$1" &> /dev/null

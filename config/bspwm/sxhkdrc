@@ -27,10 +27,10 @@ super + l
     physlock
 
 XF86MonBrightness{Up,Down}
-    sh Brightness {up,down}
+    bspbrightness {--inc,--dec}
 
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-       bspvolume{ --toggle, --inc, --dec}
+	bspvolume{ --toggle, --inc, --dec}
 
 ##---------- Screenshot ----------##
 
@@ -41,7 +41,7 @@ Print + {_,super,ctrl}
 
 # Hide/Unhide Window
 super + h
-	bspwinmask
+	bsphide
 
 # Close App
 super + {_,shift + }c
@@ -52,11 +52,8 @@ super + Escape
     xkill
 
 # Quit/Restart bspwm
-ctrl + shift + r
-	bspc wm -r
-
-#ctrl + shift + q,r
-#	bspc quit
+ctrl + shift + {r,q}
+	bspc {wm -r,quit}
 	
 # Reload Keybindings
 ctrl + alt + r
@@ -81,8 +78,8 @@ ctrl + alt + {Left,Down,Up,Right}
 	bspc node -s {west,south,north,east}
 
 # Change Focus Node
-#super + shift {Left,Down,Up,Right}
-	#bspc node -f {west,south,north,east}
+super + shift {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
 
 
 # Expanding windows
