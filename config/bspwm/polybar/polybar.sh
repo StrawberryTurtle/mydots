@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
-
 ## Files and Directories
 SFILE="$HOME/.config/bspwm/polbar/system.ini"
 RFILE="$HOME/.config/bspwm/polybar/.system"
