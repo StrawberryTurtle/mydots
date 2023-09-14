@@ -75,6 +75,7 @@ for archivos in ~/mydots/fonts/*; do
 done
 
 cp -f "$HOME"/mydots/home/.zshrc "$HOME"
+cp -f "$HOME"/mydots/home/.xinitrc "$HOME"
 fc-cache -rv >/dev/null 2>&1
 printf "%s%sFiles copied succesfully!!%s\n"
 sleep 3
