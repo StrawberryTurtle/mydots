@@ -15,7 +15,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  bluez bluez-utils \
 			  network-manager-applet \
 			  pipewire pavucontrol pulsemixer \
-			  lxappearance papirus-icon-theme xcolor arandr brightnessctl\
+			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip \
 			  nemo nemo-fileroller nemo-terminal ntfs-3g lsd viewnior gparted neofetch \
 			  alacritty firefox discord spotify-launcher physlock)
 			  
