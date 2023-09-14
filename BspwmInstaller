@@ -9,13 +9,13 @@ fi
 dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi nano \
 			  git picom maim xdotool xdg-user-dirs \
-			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xbacklight light \
+			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
 			  bluez bluez-utils \
 			  network-manager-applet \
-			  pipwire pavucontrol pulsemixer \
-			  lxappearance papirus-icon-theme xcolor arandr \
+			  pipewire pavucontrol pulsemixer \
+			  lxappearance papirus-icon-theme xcolor arandr brightnessctl\
 			  nemo nemo-fileroller nemo-terminal ntfs-3g lsd viewnior gparted neofetch \
 			  alacritty firefox discord spotify-launcher physlock)
 			  

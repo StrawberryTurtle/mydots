@@ -1,49 +1,27 @@
 #!/usr/bin/env bash
 
-# Graphics card
-CARD=`ls /sys/class/backlight | head -n 1`
+BRIGHTNESS_STEPS=10
 
-# Get brightness
-get_backlight() {
-	if [[ "$CARD" == *"intel_"* ]]; then
-		BNESS=`xbacklight -get`
-		LIGHT=${BNESS%.*}
-	else
-		LIGHT=$(printf "%.0f\n" `light -G`)
-	fi
-	echo "${LIGHT}%"
+function get_brightness {
+  brightnessctl i | grep -oP '\(\K[^%\)]+'
 }
 
-# Notify 
-notify_bl() {
-	dunstify -u low -h string:x-dunst-stack-tag:obbacklight "Brightness : $(get_backlight)"
+function send_notification {
+  brightness=$(get_brightness)
+  # Make the bar with the special character ─ (it's not dash -)
+  # https://en.wikipedia.org/wiki/Box-drawing_character
+  bar=$(seq -s "─" 0 $((brightness / 5)) | sed 's/[0-9]//g')
+  # Send the notification
+  dunstify "Brightness $brightness%" -r 5555 -u normal -h int:value:$(($brightness))
 }
 
-# Increase brightness
-inc_backlight() {
-	if [[ "$CARD" == *"intel_"* ]]; then
-		xbacklight -inc 10 && notify_bl
-	else
-		light -A 5 && notify_bl
-	fi
-}
-
-# Decrease brightness
-dec_backlight() {
-	if [[ "$CARD" == *"intel_"* ]]; then
-		xbacklight -dec 10 && notify_bl
-	else
-		light -U 5 && notify_bl
-	fi
-}
-
-# Execute accordingly
-if [[ "$1" == "--get" ]]; then
-	get_backlight
-elif [[ "$1" == "--inc" ]]; then
-	inc_backlight
-elif [[ "$1" == "--dec" ]]; then
-	dec_backlight
-else
-	get_backlight
-fi
+case $1 in
+  up)
+    brightnessctl set 10%+ -q
+    send_notification
+    ;;
+  down)
+    brightnessctl set 10%- -q
+    send_notification
+    ;;
+esac

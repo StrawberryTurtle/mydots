@@ -27,7 +27,7 @@ super + l
     physlock
 
 XF86MonBrightness{Up,Down}
-    bspbrightness {--inc,--dec}
+    bspbrightness {up,down}
 
 XF86Audio{Mute,RaiseVolume,LowerVolume}
 	bspvolume{ --toggle, --inc, --dec}
