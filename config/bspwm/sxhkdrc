@@ -24,7 +24,7 @@ ctrl + Return
 ##---------- System ----------##
 
 super + l
-    betterlockscreen --lock
+    physlock
 
 XF86MonBrightness{Up,Down}
     sh Brightness {up,down}

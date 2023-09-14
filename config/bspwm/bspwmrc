@@ -39,10 +39,7 @@ bspc rule -r *:*
 bspc rule -a Alacritty desktop='^2' follow=on focus=on
 bspc rule -a discord desktop='^3' follow=on focus=on
 bspc rule -a Spotify desktop='^3' follow=on focus=on
-bspc rule -a feh state=floating follow=on focus=on
-
-bspc rule -a Conky state=floating manage=off
-bspc rule -a stalonetray state=floating manage=off
+bspc rule -a Viewnior follow=on focus=on
 
 ## Autostart -------------------------------------------------#
 
