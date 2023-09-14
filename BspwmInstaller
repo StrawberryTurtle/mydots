@@ -7,7 +7,7 @@ fi
 
 # Define packages
 dependencias=(base-devel rustup pacman-contrib bspwm polybar sxhkd nano nemo-fileroller nemo-terminal \
-			  alacritty brightnessctl dunst rofi lsd network-manager-applet pulsemixer firefox xcolor viewnior spotify-launcher gparted neofetch discord blueman pavucontrol \
+			  alacritty brightnessctl dunst rofi lsd xcolor viewnior spotify-launcher gparted neofetch discord \
 			  git picom maim xdg-user-dirs \
 			  xorg-xprop xorg-xkill physlock papirus-icon-theme \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
@@ -99,9 +99,6 @@ paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
 
-# Enable bluetooth
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
