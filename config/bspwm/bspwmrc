@@ -50,7 +50,6 @@ bspc rule -a stalonetray state=floating manage=off
 killall -9 sxhkd dunst ksuperkey bspc picom
 
 # polkit agent
-pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & }
 
 picom --config "$HOME"/.config/bspwm/picom.conf &
 sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &

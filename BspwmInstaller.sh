@@ -7,7 +7,7 @@ fi
 
 # Define packages
 dependencias=(base-devel rustup pacman-contrib bspwm polybar sxhkd \
-			  alacritty brightnessctl dunst rofi lsd \
+			  alacritty brightnessctl dunst rofi lsd nm-applet \
 			  git picom maim xdg-user-dirs \
 			  xorg-xprop xorg-xkill physlock papirus-icon-theme \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
