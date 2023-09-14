@@ -8,7 +8,7 @@ fi
 # Define packages
 dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi nano \
-			  git picom maim xdg-user-dirs \
+			  git picom maim xdotool xdg-user-dirs \
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xbacklight light \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \

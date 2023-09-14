@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-##
-## Script to manage brightness on Archcraft.
-
-# Icons
-iDIR='/usr/share/archcraft/icons/dunst'
-
 # Graphics card
 CARD=`ls /sys/class/backlight | head -n 1`
 
@@ -21,26 +14,9 @@ get_backlight() {
 	echo "${LIGHT}%"
 }
 
-# Get icons
-get_icon() {
-	backlight="$(get_backlight)"
-	current="${backlight%%%}"
-	if [[ ("$current" -ge "0") && ("$current" -le "20") ]]; then
-		icon="$iDIR"/brightness-20.png
-	elif [[ ("$current" -ge "20") && ("$current" -le "40") ]]; then
-		icon="$iDIR"/brightness-40.png
-	elif [[ ("$current" -ge "40") && ("$current" -le "60") ]]; then
-		icon="$iDIR"/brightness-60.png
-	elif [[ ("$current" -ge "60") && ("$current" -le "80") ]]; then
-		icon="$iDIR"/brightness-80.png
-	elif [[ ("$current" -ge "80") && ("$current" -le "100") ]]; then
-		icon="$iDIR"/brightness-100.png
-	fi
-}
-
 # Notify 
 notify_bl() {
-	get_icon && dunstify -u low -h string:x-dunst-stack-tag:obbacklight -i "$icon" "Brightness : $(get_backlight)"
+	dunstify -u low -h string:x-dunst-stack-tag:obbacklight "Brightness : $(get_backlight)"
 }
 
 # Increase brightness

@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="themes"
-RASI="$DIR/rofi/screenshot.rasi"
+RASI="$DIR/rofi/Purple.rasi"
 
 # Theme Elements
 prompt='Screenshot'
@@ -13,19 +10,11 @@ mesg="Directory :: `xdg-user-dir PICTURES`/Screenshots"
 
 # Options
 layout=`cat ${RASI} | grep 'USE_ICON' | cut -d'=' -f2`
-if [[ "$layout" == 'NO' ]]; then
-	option_1=" Capture Desktop"
-	option_2=" Capture Area"
-	option_3=" Capture Window"
-	option_4=" Capture in 5s"
-	option_5=" Capture in 10s"
-else
 	option_1="Capture Desktop"
 	option_2="Capture Area"
 	option_3="Capture Window"
 	option_4="Capture in 5s"
 	option_5="Capture in 10s"
-fi
 
 # Rofi CMD
 rofi_cmd() {
@@ -33,7 +22,7 @@ rofi_cmd() {
 		-p "$prompt" \
 		-mesg "$mesg" \
 		-markup-rows \
-		-theme ${RASI}
+		-theme $HOME/.config/bspwm/rofi/Purple.rasi
 }
 
 # Pass variables to rofi dmenu
@@ -54,7 +43,7 @@ fi
 
 # notify and view screenshot
 notify_view() {
-	notify_cmd_shot='dunstify -u low -h string:x-dunst-stack-tag:obscreenshot -i /usr/share/archcraft/icons/dunst/picture.png'
+	notify_cmd_shot='dunstify -u low -h string:x-dunst-stack-tag:obscreenshot'
 	${notify_cmd_shot} "Copied to clipboard."
 	paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
 	viewnior ${dir}/"$file"
@@ -73,7 +62,7 @@ copy_shot () {
 # countdown
 countdown () {
 	for sec in `seq $1 -1 1`; do
-		dunstify -t 1000 -h string:x-dunst-stack-tag:screenshottimer -i /usr/share/archcraft/icons/dunst/timer.png "Taking shot in : $sec"
+		dunstify -t 1000 -h string:x-dunst-stack-tag:screenshottimer "Taking shot in : $sec"
 		sleep 1
 	done
 }
