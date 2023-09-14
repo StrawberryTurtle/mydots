@@ -91,6 +91,18 @@ else
 	printf "%s%sParu is already installed%s\n"
 fi
 
+if
+	paru -S catppuccin-gtk-theme-mocha --skipreview --noconfirm
+	paru -S all-repository-fonts --skipreview --noconfirm
+	paru -S breeze-snow-cursor-theme --skipreview --noconfirm
+	paru -S ksuperkey --skipreview --noconfirm
+	paru -S  --skipreview --noconfirm
+	paru -S  --skipreview --noconfirm
+	paru -S  --skipreview --noconfirm
+	paru -S  --skipreview --noconfirm
+
+fi
+
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
 if [[ $SHELL != "/usr/bin/zsh" ]]; then
