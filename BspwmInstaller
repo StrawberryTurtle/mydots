@@ -11,7 +11,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
 			  blueman network-manager-applet \
-			  pipewire pavucontrol \
+			  pulseaudio pavucontrol pamixer\
 			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-fileroller nemo-terminal ntfs-3g viewnior neofetch \
 			  kitty spotify-launcher physlock \
