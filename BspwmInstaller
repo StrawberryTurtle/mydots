@@ -1,4 +1,3 @@
-
 # Cannot be run as root
 if [ "$(id -u)" = 0 ]; then
     echo "Cannot be run as root."
@@ -10,18 +9,14 @@ dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi nano \
 			  git picom maim xdotool xdg-user-dirs \
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr \
-			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
-			  bluez bluez-utils \
-			  network-manager-applet \
-			  pipewire pavucontrol pulsemixer \
-			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip \
-			  nemo nemo-fileroller nemo-terminal ntfs-3g lsd viewnior gparted neofetch \
-			  alacritty firefox discord spotify-launcher physlock)
-			  
-			  
-			  
-			  
+			  blueman network-manager-applet \
+			  pipewire pavucontrol \
+			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
+			  nemo nemo-fileroller nemo-terminal ntfs-3g viewnior neofetch \
+			  kitty spotify-launcher physlock \
+			  jdk-openjdk gcc \ 
+			  ibus-anthy ibus-hangul ibus-pinyin)
 
 is_installed() {
   pacman -Qi "$1" &> /dev/null
@@ -107,7 +102,11 @@ paru -S all-repository-fonts --skipreview --noconfirm
 paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
-
+paru -S sidekick-browser-stable-bin 
+paru -S ibus-autostart
+paru -S discord-screenaudio
+paru -S tetrio-desktop
+paru -S proton-ge-custom-bin
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"

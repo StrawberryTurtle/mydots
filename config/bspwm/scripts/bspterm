@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-alacritty --config-file "$HOME/.config/bspwm/alacritty/alacritty.yml"
+#alacritty --config-file "$HOME/.config/bspwm/alacritty/alacritty.yml"
+
+kitty -c $HOME/.config/bspwm/kitty.conf

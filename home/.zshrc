@@ -2,8 +2,8 @@
 # Vars
 export VISUAL='code'
 export EDITOR='nano'
-export TERMINAL='alacritty'
-export BROWSER='firefox'
+export TERMINAL='kitty'
+export BROWSER='sidekick-browser-bin'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 if [ -d "$HOME/.local/bin" ] ;
@@ -105,4 +105,4 @@ alias vm-off="sudo systemctl stop libvirtd.service"
 alias musica="ncmpcpp"
 
 alias ls='lsd -a --group-directories-first'
-alias ll='lsd -la --group-directories-first'
+alias ll='lsd -la --group-directories-first'+

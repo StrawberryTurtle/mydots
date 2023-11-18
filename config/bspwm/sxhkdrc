@@ -6,7 +6,7 @@ alt + F1
 super + r
 	rofi_runner
 
-ctrl + shift + w
+ctrl + alt + w
 	rofi_windows
 
 super + x
@@ -15,8 +15,8 @@ super + x
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {d,s,g,w,e,p,t,m,v}
-	{discord,steam,geany,firefox,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code}
+super + {d,s,w,e,p,t,m,v,b}
+	{discord-screenaudio,steam,sidekick-browser-stable,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code,blueman-manager}
 
 ctrl + Return
 	bspterm
