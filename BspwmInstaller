@@ -11,7 +11,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-xserver \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
-			  pulseaudio pulseaudio-alsa pulseaudio-bluetooth \
+			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack \
 			  bluez bluez-utils \
 			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch \
