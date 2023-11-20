@@ -15,8 +15,8 @@ super + x
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {d,s,w,e,p,t,m,v,b}
-	{discord-screenaudio,steam,sidekick-browser-stable,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code,blueman-manager}
+super + {d,s,w,e,p,t,m,v,b,a}
+        {discord-screenaudio,steam,sidekick-browser-stable,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code,blueman-manager,pavucontrol}
 
 ctrl + Return
 	bspterm
