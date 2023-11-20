@@ -8,10 +8,11 @@ fi
 dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi lsd nano \
 			  git picom maim xdotool xdg-user-dirs \
-			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-xserver \
+			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
 			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack \
+			  networkmanager network-manager-applet \
 			  bluez bluez-utils \
 			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch \
@@ -102,6 +103,8 @@ paru -S all-repository-fonts --skipreview --noconfirm
 paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
+paru -S sidekick-browser-stable-bin
+paru -S discord-screenaudio
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
