@@ -2,7 +2,7 @@
 
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-RASI="$DIR/rofi/Purple.rasi"
+RASI="$DIR/Purple.rasi"
 
 # Theme Elements
 prompt="Powermenu"
