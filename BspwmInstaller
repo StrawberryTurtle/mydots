@@ -81,6 +81,7 @@ done
 cp -f "$HOME"/mydots/home/.zshrc "$HOME"
 cp -f "$HOME"/mydots/home/.xinitrc "$HOME"
 cp -f "$HOME"/mydots/home/.bashrc "$HOME"
+cp -f "$HOME"/mydots/home/.gtkrc-2.0 "$HOME"
 fc-cache -rv >/dev/null 2>&1
 printf "%s%sFiles copied succesfully!!%s\n"
 sleep 3
@@ -105,8 +106,6 @@ paru -S ksuperkey --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
 paru -S sidekick-browser-stable-bin
 paru -S discord-screenaudio
-
-cp -f "$HOME"/mydots/home/.gtkrc-2.0 "$HOME"
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
