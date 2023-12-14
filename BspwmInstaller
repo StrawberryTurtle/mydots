@@ -100,11 +100,10 @@ fi
 
 # Random Packages
 paru -S catppuccin-gtk-theme-mocha --skipreview --noconfirm
-paru -S all-repository-fonts --skipreview --noconfirm
+paru -S material-icon-theme-git --skipreview --noconfirm
 paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
-paru -S sidekick-browser-stable-bin
 paru -S discord-screenaudio
 
 #Change shell to zsh
