@@ -11,9 +11,9 @@ dependencias=(base-devel rustup pacman-contrib \
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
-			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack \
+			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer \
 			  networkmanager network-manager-applet \
-			  bluez bluez-utils \
+			  bluez bluez-utils blueman \
 			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch \
 			  kitty spotify-launcher physlock ibus-anthy)
@@ -103,6 +103,8 @@ paru -S catppuccin-gtk-theme-mocha --skipreview --noconfirm
 paru -S material-icon-theme-git --skipreview --noconfirm
 paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
+paru -S lorien-bin --skipreview --noconfirm
+paru -S qt5ct --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
 paru -S discord-screenaudio
 
