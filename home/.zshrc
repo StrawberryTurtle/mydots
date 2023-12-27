@@ -3,7 +3,7 @@
 export VISUAL='code'
 export EDITOR='nano'
 export TERMINAL='kitty'
-export BROWSER='sidekick-browser-bin'
+export BROWSER='firefox'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 if [ -d "$HOME/.local/bin" ] ;
