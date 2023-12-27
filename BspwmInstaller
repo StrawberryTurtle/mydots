@@ -14,7 +14,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer \
 			  networkmanager network-manager-applet \
 			  bluez bluez-utils blueman \
-			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
+			  lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch \
 			  kitty spotify-launcher physlock ibus-anthy)
 
