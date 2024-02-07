@@ -15,7 +15,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  networkmanager network-manager-applet \
 			  bluez bluez-utils blueman \
 			  lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
-			  nemo nemo-terminal ntfs-3g viewnior neofetch \
+			  nemo nemo-terminal ntfs-3g viewnior neofetch nemo-filer nemo-fileroller \
 			  kitty spotify-launcher physlock ibus-anthy)
 
 is_installed() {
@@ -67,17 +67,6 @@ for archivos in ~/mydots/config/*; do
   fi
 done
 
-for archivos in ~/mydots/fonts/*; do
-  cp -R "${archivos}" ~/.local/share/fonts/
-  if [ $? -eq 0 ]; then
-	printf "%s%s%s copied succesfully!%s\n"
-	sleep 1
-  else
-	printf "%s%s%s failed to copy fonts%s\n"
-	sleep 1
-  fi
-done
-
 cp -f "$HOME"/mydots/home/.zshrc "$HOME"
 cp -f "$HOME"/mydots/home/.xinitrc "$HOME"
 cp -f "$HOME"/mydots/home/.bashrc "$HOME"
@@ -108,6 +97,7 @@ paru -S qt5ct --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
 paru -S floorp-bin
 paru -S lxsession-gtk3
+paru -S vesktop-bin
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
