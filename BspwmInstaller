@@ -67,6 +67,17 @@ for archivos in ~/mydots/config/*; do
   fi
 done
 
+for archivos in ~/mydots/fonts/*; do
+  cp -R "${archivos}" ~/.local/share/fonts/
+  if [ $? -eq 0 ]; then
+    printf "%s%s%s copied succesfully!%s\n"
+    sleep 1
+  else
+    printf "%s%s%s failed to copy fonts%s\n"
+    sleep 1
+  fi
+done
+
 cp -f "$HOME"/mydots/home/.zshrc "$HOME"
 cp -f "$HOME"/mydots/home/.xinitrc "$HOME"
 cp -f "$HOME"/mydots/home/.bashrc "$HOME"
@@ -90,7 +101,6 @@ fi
 # Random Packages
 paru -S catppuccin-gtk-theme-mocha --skipreview --noconfirm
 paru -S material-icon-theme-git --skipreview --noconfirm
-paru -S breeze-snow-cursor-theme --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S lorien-bin --skipreview --noconfirm
 paru -S qt5ct --skipreview --noconfirm
