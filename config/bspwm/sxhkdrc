@@ -16,9 +16,9 @@ super + x
 
 # Launch Apps
 super + {d,s,w,e,p,t,m,v,b,a}
-        {discord-screenaudio,steam,sidekick-browser-stable,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code,blueman-manager,pavucontrol}
+        {vencord-desktop,steam,floorp,nemo,bspcolorpicker,tetrio-desktop,spotify,code,blueman-manager,pavucontrol}
 
-ctrl + Return
+super + Return
 	bspterm
 
 ##---------- System ----------##
@@ -65,7 +65,7 @@ ctrl + {e}
         bspc desktop -f {next.local}
 
 # Switch workspace or Send focused Node to another workspace
-{ctrl+shift,ctrl} + {1-4}
+{super+shift,super} + {1-4}
         bspc {desktop -f,node -d} '^{1-4}' '--follow'
 
 # Send focused Node to workspace directionally
@@ -81,8 +81,11 @@ alt + {u,p,i,o}
         bspc node -f {west,south,north,east}
 
 # Toggle Fullscreen
-alt + f
+super + f
     bspc node -t "~"fullscreen
+
+super + space
+	{polybar-msg cmd toggle; bspc config bottom_padding 0 ,polybar-msg cmd toggle; bspc bottom_padding 20 } 
 
 # Toggle beetwen floating & tiled
 #ctrl + space
