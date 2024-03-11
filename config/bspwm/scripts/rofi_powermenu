@@ -29,7 +29,8 @@ rofi_cmd() {
 		-p "$prompt" \
 		-mesg "$mesg" \
 		-markup-rows \
-		-theme ${RASI}
+		-theme ${RASI} \
+		-kb-cancel Alt-F1
 }
 
 # Pass variables to rofi dmenu
@@ -42,7 +43,8 @@ confirm_cmd() {
 	rofi -dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${RASI}
+		-theme ${RASI} \
+		-kb-cancel Alt-F1
 }
 
 # Ask for confirmation
