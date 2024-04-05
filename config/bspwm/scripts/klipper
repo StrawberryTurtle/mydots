@@ -25,6 +25,7 @@ menu () {
 
 	rofi_cmd() {
 		rofi -dmenu \
+		    -kb-cancel Alt-F1 \
 			-p "$prompt" \
 			-mesg "$mesg" \
 			-markup-rows \

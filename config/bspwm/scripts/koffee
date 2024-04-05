@@ -17,7 +17,7 @@ yes='Yes'
 no='No'
 
 confirm_run () {	
-	selected="$(echo -e "$yes\n$no" | 	rofi -dmenu -p 'Confirmation' -mesg 'Are you Sure?' -theme ${RASI})"
+	selected="$(echo -e "$yes\n$no" | 	rofi -dmenu -kb-cancel Alt-F1 -p 'Confirmation' -mesg 'Are you Sure?' -theme ${RASI})"
 	if [[ "$selected" == "$yes" ]]; then
         ${1}
     else
@@ -25,7 +25,7 @@ confirm_run () {
     fi	
 }
 
-chosen="$(echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | 	rofi -dmenu -p "$prompt" -mesg "$mesg" -markup-rows -theme ${RASI})"
+chosen="$(echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | 	rofi -dmenu -kb-cancel Alt-F1 -p "$prompt" -mesg "$mesg" -markup-rows -theme ${RASI})"
 
 case ${chosen} in
     $option_1)
