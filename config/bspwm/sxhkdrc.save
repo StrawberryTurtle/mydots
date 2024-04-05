@@ -1,54 +1,50 @@
 ##---------- Rofi ----------##
 
 alt + F1
-	rofi_launcher
+	kapps
 
-super + r
-	rofi_runner
-
-ctrl + alt + w
-	rofi_windows
-
-super + x
-	rofi_powermenu
+super {r,w,x}
+	{karun,kawin,koffee}
 
 ##---------- Applications ----------##
 
-# Launch Apps
-super + {d,s,w,e,p,t,m,v,b,a}
-        {discord-screenaudio,steam,sidekick-browser-stable,nemo,bspcolorpicker,tetrio-desktop,spotify-launcher,code,blueman-manager,pavucontrol}
-
-ctrl + Return
-	bspterm
+super + {Return,l,g,t,d,s,f,e,p,m,v,b,a}
+        {katerm,lorien,godot,tetrio-desktop,vesktop,steam,floorp,nemo,bspcolorpicker,spotify,code,blueman-manager,pavucontrol}
 
 ##---------- System ----------##
 
-super + l
+super + Escape
     physlock
 
 XF86MonBrightness{Up,Down}
-    bspbrightness {up,down}
+    kaprisun {up,down}
 
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-	bspvolume{ --toggle, --inc, --dec}
+	kaudio { --toggle, --inc, --dec}
 
 ##---------- Screenshot ----------##
 
 Print + {_,super,ctrl}
-	{bspscreenshot --area, bspscreenshot --win, bspscreenshot --now}
+	{klipper --area, klipper --win, klipper --now}
+
+alt + p
+	klipper --area
+
+super + alt + p
+	klipper --menu
 
 ##---------- Bspwm ----------##
 
 # Hide/Unhide Window
 super + h
-	bsphide
+	konceal
 
 # Close App
 super + {_,shift + }c
 	bspc node -{c,k}
 
 # kill window
-super + Escape
+ctrl + shift + Escape
     xkill
 
 # Quit/Restart bspwm
@@ -65,51 +61,27 @@ ctrl + {e}
         bspc desktop -f {next.local}
 
 # Switch workspace or Send focused Node to another workspace
-{ctrl+shift,ctrl} + {1-4}
+{ctrl,super} + {1-4}
         bspc {desktop -f,node -d} '^{1-4}' '--follow'
 
-# Send focused Node to workspace directionally
-#super + {Left,Right}
-#       bspc node -d {prev,next} '--follow'
-
-# Swap Nodes
-ctrl + alt + {Left,Down,Up,Right}
-        bspc node -s {west,south,north,east}
-
-# Change Focus Node
-alt + {u,p,i,o}
-        bspc node -f {west,south,north,east}
+# Switch or Swap Nodes
+alt + {_,ctrl + } {h,j,k,l}
+        bspc node {-f,-s} {north,west,south,east}
 
 # Toggle Fullscreen
-alt + f
+super + space
     bspc node -t "~"fullscreen
+
+#super + space
+#	{polybar-msg cmd toggle; bspc config bottom_padding 0 ,polybar-msg cmd toggle; bspc bottom_padding 20 } 
 
 # Toggle beetwen floating & tiled
 #ctrl + space
 #    bspc node -t "~"{floating,tiled}
 
-########
-
-# Switch workspace
-#ctrl + {Left,Right}
-#	bspc desktop -f {prev.local,next.local}
-
-# Switch workspace or Send focused Node to another workspace
-#{ctrl,super} + {1-8} 
-#	bspc {desktop -f,node -d} '^{1-8}' '--follow'
-
 # Send focused Node to workspace directionally
 #super + {Left,Right}
 #	bspc node -d {prev,next} '--follow'
-
-# Swap Nodes
-#ctrl + alt + {Left,Down,Up,Right}
-#	bspc node -s {west,south,north,east}
-
-# Change Focus Node
-#super + shift {Left,Down,Up,Right}
-#	bspc node -f {west,south,north,east}
-
 
 # Expanding windows
 #super + control + {Left,Right,Up,Down}
@@ -128,13 +100,5 @@ alt + f
 
 # Preselect the ratio
 # bspc node -o 0.{1-9}
-
-# Toggle Fullscreen
-#super + f
-#    bspc node -t "~"fullscreen
-
-# Toggle beetwen floating & tiled
-#super + space
-#    bspc node -t "~"{floating,tiled}
 
 ##---------- EOF ----------##

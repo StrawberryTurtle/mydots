@@ -16,7 +16,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  bluez bluez-utils blueman \
 			  lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch nemo-filer nemo-fileroller \
-			  kitty spotify-launcher physlock ibus-anthy)
+			  kitty spotify-launcher physlock ibus-anthy htop gparted kdenlive)
 
 is_installed() {
   pacman -Qi "$1" &> /dev/null
@@ -105,9 +105,9 @@ paru -S ksuperkey --skipreview --noconfirm
 paru -S lorien-bin --skipreview --noconfirm
 paru -S qt5ct --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
-paru -S floorp-bin
-paru -S lxsession-gtk3
-paru -S vesktop-bin
+paru -S floorp-bin --skipreview --noconfirm
+paru -S lxsession-gtk3 --skipreview --noconfirm
+paru -S vesktop-bin --skipreview --noconfirm
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"

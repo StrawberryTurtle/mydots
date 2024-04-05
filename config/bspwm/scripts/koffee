@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+RASI="$HOME/.config/bspwm/Purple.rasi"
+
+prompt="Powermenu"
+mesg="Uptime : `uptime -p | sed -e 's/up //g'`"
+
+layout=`cat ${RASI} | cut -d'=' -f2`
+    option_1="Lock"
+    option_2="Logout"
+    option_3="Suspend"
+    option_4="Hibernate"
+    option_5="Reboot"
+    option_6="Shutdown"
+
+yes='Yes'
+no='No'
+
+confirm_run () {	
+	selected="$(echo -e "$yes\n$no" | 	rofi -dmenu -p 'Confirmation' -mesg 'Are you Sure?' -theme ${RASI})"
+	if [[ "$selected" == "$yes" ]]; then
+        ${1}
+    else
+        exit
+    fi	
+}
+
+chosen="$(echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | 	rofi -dmenu -p "$prompt" -mesg "$mesg" -markup-rows -theme ${RASI})"
+
+case ${chosen} in
+    $option_1)
+		physlock
+        ;;
+    $option_2)
+		confirm_run 'bspc quit'
+        ;;
+    $option_3)
+        confirm_run 'systemctl suspend'
+        ;;
+    $option_4)
+		confirm_run 'systemctl hibernate'
+        ;;
+    $option_5)
+		confirm_run 'systemctl reboot'
+        ;;
+    $option_6)
+		confirm_run 'systemctl poweroff'
+        ;;
+esac

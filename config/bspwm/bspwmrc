@@ -15,7 +15,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #xrandr --output eDP-1 --primary --mode 1920x1200 --rate 60 
 
 #Desktop
-xrandr --output HDMI-1 --primary --mode 1920x1080 --rate 165 --output DP-3 --mode 1920x1080 --right-of HDMI-1
+xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 --right-of HDMI-A-0
 
 
 ## Do 'bspc query -M'
@@ -24,8 +24,8 @@ xrandr --output HDMI-1 --primary --mode 1920x1080 --rate 165 --output DP-3 --mod
 #bspc monitor -n eDP-1 -d '1' '2' '3'
 
 #Desktop
-bspc monitor HDMI-1 -d 1 2
-bspc monitor DP-3 -d 1 2
+bspc monitor HDMI-A-0 -d 1 2
+bspc monitor DisplayPort-2 -d 1 2
 
 ## Apply bspwm configurations
 bspc config border_width 3
@@ -39,31 +39,35 @@ bspc config presel_feedback_color "#ffffff"
 
 bspc config focus_follows_pointer true
 bspc config presel_feedback true
-
 ## Manage unmanaged windows
 bspc wm --adopt-orphans
+
+#bspc config bottom_padding 0
 
 ## Window rules ----------------------------------------------#
 
 bspc rule -r *:*
-bspc rule -a discord-screenaudio desktop='^3' follow=on focus=on
+bspc rule -a vencord-desktop desktop='^3' follow=on focus=on
 bspc rule -a Spotify desktop='^2' follow=on focus=on
 bspc rule -a Viewnior state=floating follow=on focus=on
 
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 sxhkd dunst ksuperkey bspc picom
+killall -9 sxhkd dunst ksuperkey picom polybar
 
 # polkit agent
 
 picom --config "$HOME"/.config/bspwm/picom.conf &
 sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
 dunst -config "$HOME"/.config/bspwm/dunstrc &
-bash "$HOME"/.config/bspwm/polybar/polybar.sh
 
-ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
+for mon in $(polybar --list-monitors | cut -d":" -f1); do
+	MONITOR=$mon polybar -q main -c "$HOME"/.config/bspwm/polybar/config.ini &
+done
+
+ksuperkey -e 'Super_L=Alt_L|F1'
+ksuperkey -e 'Super_R=Alt_L|F1'
 
 xsetroot -cursor_name left_ptr
 
