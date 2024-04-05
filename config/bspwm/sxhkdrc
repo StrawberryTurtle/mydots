@@ -9,7 +9,7 @@ super {r,w,x}
 ##---------- Applications ----------##
 
 super + {Return,l,g,t,d,s,f,e,p,m,v,b,a}
-        {katerm,lorien,godot,tetrio-desktop,vesktop,steam,floorp,nemo,bspcolorpicker,spotify,code,blueman-manager,pavucontrol}
+        {katerm,lorien,godot,tetrio-desktop,vesktop,steam,floorp,nemo,kolors,spotify,code,blueman-manager,pavucontrol}
 
 ##---------- System ----------##
 
