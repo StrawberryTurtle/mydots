@@ -99,6 +99,7 @@ fi
 
 # Random Packages
 paru -S catppuccin-gtk-theme-mocha --skipreview --noconfirm
+paru -S catppuccin-cursors-mocha --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S lorien-bin --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
