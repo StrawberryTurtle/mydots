@@ -7,14 +7,13 @@ fi
 # Define packages
 dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi lsd nano \
-			  git picom maim xdotool xdg-user-dirs polkit\
+			  git picom maim xdotool xdg-user-dirs polkit lxsession-gtk3\
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
-			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
-			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer \
+			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol \
 			  networkmanager network-manager-applet \
 			  bluez bluez-utils blueman \
-			  lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
+			  qt5ct lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch nemo-filer nemo-fileroller \
 			  kitty spotify-launcher physlock ibus-anthy htop gparted kdenlive)
 
@@ -100,13 +99,10 @@ fi
 
 # Random Packages
 paru -S catppuccin-gtk-theme-mocha --skipreview --noconfirm
-paru -S material-icon-theme-git --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S lorien-bin --skipreview --noconfirm
-paru -S qt5ct --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
-paru -S floorp-bin --skipreview --noconfirm
-paru -S lxsession-gtk3 --skipreview --noconfirm
+paru -S waterfox --skipreview --noconfirm
 paru -S vesktop-bin --skipreview --noconfirm
 
 #Change shell to zsh
