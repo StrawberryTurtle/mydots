@@ -9,6 +9,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi lsd nano \
 			  git picom maim xdotool xdg-user-dirs polkit lxsession-gtk3\
 			  xorg-xprop xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
+			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
 			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol \
 			  networkmanager network-manager-applet \
@@ -103,7 +104,7 @@ paru -S catppuccin-cursors-mocha --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S lorien-bin --skipreview --noconfirm
 paru -S visual-studio-code-bin --skipreview --noconfirm
-paru -S waterfox --skipreview --noconfirm
+paru -S waterfox-bin --skipreview --noconfirm
 paru -S vesktop-bin --skipreview --noconfirm
 
 #Change shell to zsh
