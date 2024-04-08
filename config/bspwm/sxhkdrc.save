@@ -9,7 +9,7 @@ super {r,w,x}
 ##---------- Applications ----------##
 
 super + {Return,l,g,t,d,s,f,e,p,m,v,b,a}
-        {katerm,lorien,godot,tetrio-desktop,vesktop,steam,floorp,nemo,bspcolorpicker,spotify,code,blueman-manager,pavucontrol}
+        {katerm,lorien,godot,tetrio-desktop,vesktop,steam,waterfox,nemo,kolors,spotify,code,blueman-manager,pavucontrol}
 
 ##---------- System ----------##
 
@@ -72,16 +72,16 @@ alt + {_,ctrl + } {h,j,k,l}
 super + space
     bspc node -t "~"fullscreen
 
+# Switch Desktop of Move Node to Another Desktop Directionally
+{alt,super} + {Left,Right}
+	bspc {desktop -f,node -d} {prev,next} '--follow'
+
 #super + space
 #	{polybar-msg cmd toggle; bspc config bottom_padding 0 ,polybar-msg cmd toggle; bspc bottom_padding 20 } 
 
 # Toggle beetwen floating & tiled
 #ctrl + space
 #    bspc node -t "~"{floating,tiled}
-
-# Send focused Node to workspace directionally
-#super + {Left,Right}
-#	bspc node -d {prev,next} '--follow'
 
 # Expanding windows
 #super + control + {Left,Right,Up,Down}
