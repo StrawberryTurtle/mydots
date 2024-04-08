@@ -8,22 +8,14 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 ## Configurations --------------------------------------------#
 
-
-#bspc wm -O eDP-1 HDMI-1
-
 #laptop
 #xrandr --output eDP-1 --primary --mode 1920x1200 --rate 60 
+#bspc monitor -n eDP-1 -d '1' '2' '3'
+#bspc wm -O eDP-1
 
 #Desktop
 xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 --right-of HDMI-A-0
-
-
-## Do 'bspc query -M'
-
-#Laptop
-#bspc monitor -n eDP-1 -d '1' '2' '3'
-
-#Desktop
+bspc wm -O HDMI-A-0 DisplayPort-2
 bspc monitor HDMI-A-0 -d 1 2
 bspc monitor DisplayPort-2 -d 1 2
 
@@ -42,12 +34,10 @@ bspc config presel_feedback true
 ## Manage unmanaged windows
 bspc wm --adopt-orphans
 
-#bspc config bottom_padding 0
-
 ## Window rules ----------------------------------------------#
 
 bspc rule -r *:*
-bspc rule -a vencord-desktop desktop='^3' follow=on focus=on
+#bspc rule -a vencord-desktop desktop='^3' follow=on focus=on
 bspc rule -a Spotify desktop='^2' follow=on focus=on
 bspc rule -a Viewnior state=floating follow=on focus=on
 
@@ -55,8 +45,6 @@ bspc rule -a Viewnior state=floating follow=on focus=on
 
 # Kill if already running
 killall -9 sxhkd dunst ksuperkey polybar
-
-# polkit agent
 
 sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
 dunst -config "$HOME"/.config/bspwm/dunstrc &
