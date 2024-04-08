@@ -37,7 +37,6 @@ bspc wm --adopt-orphans
 ## Window rules ----------------------------------------------#
 
 bspc rule -r *:*
-#bspc rule -a vencord-desktop desktop='^3' follow=on focus=on
 bspc rule -a Spotify desktop='^2' follow=on focus=on
 bspc rule -a Viewnior state=floating follow=on focus=on
 
