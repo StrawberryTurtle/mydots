@@ -7,12 +7,13 @@ fi
 # Define packages
 dependencias=(base-devel rustup pacman-contrib \
 			  bspwm polybar sxhkd dunst rofi lsd nano \
-			  git maim xdotool xdg-user-dirs lxsession-gtk3\
+			  git maim xdotool xdg-user-dirs lxsession-gtk3 picom\
 			  xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
 			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol \
-			  networkmanager network-manager-applet bluez bluez-utils blueman \
+			  bluez bluez-utils blueman \
+			  networkmanager network-manager-applet \
 			  qt5ct lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch nemo-filer nemo-fileroller \
 			  kitty spotify-launcher physlock ibus-anthy htop gparted kdenlive)
