@@ -45,6 +45,7 @@ bspc rule -a Viewnior state=floating follow=on focus=on
 # Kill if already running
 killall -9 sxhkd dunst ksuperkey polybar
 
+picom --config "$HOME"/.config/bspwm/picom.conf &
 sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
 dunst -config "$HOME"/.config/bspwm/dunstrc &
 
