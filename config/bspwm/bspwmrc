@@ -43,7 +43,7 @@ bspc rule -a Viewnior state=floating follow=on focus=on
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 sxhkd dunst ksuperkey polybar
+killall -9 sxhkd dunst ksuperkey polybar picom
 
 picom --config "$HOME"/.config/bspwm/picom.conf &
 sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
