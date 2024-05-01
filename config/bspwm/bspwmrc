@@ -31,13 +31,13 @@ bspc config presel_feedback_color "#ffffff"
 
 bspc config focus_follows_pointer true
 bspc config presel_feedback true
+
 ## Manage unmanaged windows
 bspc wm --adopt-orphans
 
 ## Window rules ----------------------------------------------#
 
 bspc rule -r *:*
-bspc rule -a Spotify desktop='^2' follow=on focus=on
 bspc rule -a Viewnior state=floating follow=on focus=on
 
 ## Autostart -------------------------------------------------#
