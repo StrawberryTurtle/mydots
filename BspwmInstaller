@@ -10,13 +10,14 @@ dependencias=(base-devel rustup pacman-contrib \
 			  git maim xdotool xdg-user-dirs lxsession-gtk3 picom\
 			  xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
 			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata \
+        noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
+        bluez bluez-utils blueman \
 			  pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol \
-			  bluez bluez-utils blueman \
 			  networkmanager network-manager-applet \
-			  qt5ct lxappearance lib32-libappindicator-gtk2 papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
+			  lxappearance papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
 			  nemo nemo-terminal ntfs-3g viewnior neofetch nemo-filer nemo-fileroller \
-			  kitty spotify-launcher physlock ibus-anthy htop gparted kdenlive)
+			  audacity kitty spotify-launcher physlock ibus-anthy htop gparted kdenlive gimp )
 
 is_installed() {
   pacman -Qi "$1" &> /dev/null
