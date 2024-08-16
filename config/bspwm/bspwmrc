@@ -14,10 +14,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #bspc wm -O eDP-1
 
 #Desktop
-xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 --right-of HDMI-A-0
-bspc wm -O HDMI-A-0 DisplayPort-2
-bspc monitor HDMI-A-0 -d 1 2
-bspc monitor DisplayPort-2 -d 1 2
+#xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 --right-of HDMI-A-0
+#bspc wm -O HDMI-A-0 DisplayPort-2
+#bspc monitor HDMI-A-0 -d 1 2
+#bspc monitor DisplayPort-2 -d 1 2
 
 ## Apply bspwm configurations
 bspc config border_width 3
