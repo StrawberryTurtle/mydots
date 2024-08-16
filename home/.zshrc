@@ -1,9 +1,9 @@
 
 # Vars
-export VISUAL='code'
+export VISUAL='geany'
 export EDITOR='nano'
 export TERMINAL='kitty'
-export BROWSER='firefox'
+export BROWSER='floorp'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 if [ -d "$HOME/.local/bin" ] ;
@@ -101,8 +101,6 @@ alias update="paru -Syu --nocombinedupgrade"
 
 alias vm-on="sudo systemctl start libvirtd.service"
 alias vm-off="sudo systemctl stop libvirtd.service"
-
-alias musica="ncmpcpp"
 
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'+
