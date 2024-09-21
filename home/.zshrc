@@ -3,7 +3,7 @@
 export VISUAL='geany'
 export EDITOR='nano'
 export TERMINAL='kitty'
-export BROWSER='floorp'
+export BROWSER='zen-browser'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 if [ -d "$HOME/.local/bin" ] ;
