@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-kitty -c $HOME/.config/bspwm/kitty.conf
