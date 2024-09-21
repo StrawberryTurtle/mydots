@@ -2,15 +2,23 @@
 
 # App Menu
 alt + F1
-	kapps
+        rofi -show drun -kb-cancel Alt-F1 -theme $HOME/.config/bspwm/Purple.rasi
 
-# Run / Window / Power Menu
-super {r,w,x}
-	{karun,kawin,koffee}
+# Run / Window
+super + {r,w}
+        rofi -show {run,window} -kb-cancel Alt-F1 -theme $HOME/.config/bspwm/Purple.rasi
+
+# Power Menu
+super + x
+        koffee
 
 # Apps
-super + {Return,l,g,t,d,s,f,e,p,m,v,b,a,g,k}
-        {katerm,lorien,godot,tetrio-desktop,vesktop,steam,waterfox,nemo,kolors,spotify-launcher,code,blueman-manager,pavucontrol,gimp,kdenlive}
+super + {l,t,d,s,z,p,m,v,b,a}
+        {lorien,tetrio-desktop,vesktop,steam,zen-browser,kolors,spotify-launcher,code,blueman-manager,pav>
+
+# Terminal Apps
+super + {h,y,Return}
+        kitty -c $HOME/.config/bspwm/kitty.conf {-e htop,-e yazi,_}
 
 ##---------- System ----------##
 
