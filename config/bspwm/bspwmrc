@@ -9,12 +9,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 ## Configurations --------------------------------------------#
 
 #laptop
-#xrandr --output eDP-1 --primary --mode 1920x1200 --rate 60 
+#xrandr --output eDP-1 --primary --mode 1920x1200 --rate 60
 #bspc monitor -n eDP-1 -d '1' '2' '3'
 #bspc wm -O eDP-1
 
 #Desktop
-#xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 --right-of HDMI-A-0
+#xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 ->
 #bspc wm -O HDMI-A-0 DisplayPort-2
 #bspc monitor HDMI-A-0 -d 1 2
 #bspc monitor DisplayPort-2 -d 1 2
@@ -50,7 +50,7 @@ sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
 dunst -config "$HOME"/.config/bspwm/dunstrc &
 
 for mon in $(polybar --list-monitors | cut -d":" -f1); do
-	MONITOR=$mon polybar -q main -c "$HOME"/.config/bspwm/polybar/config.ini &
+        MONITOR=$mon polybar -q main -c "$HOME"/.config/bspwm/polybar/config.ini &
 done
 
 ksuperkey -e 'Super_L=Alt_L|F1'
