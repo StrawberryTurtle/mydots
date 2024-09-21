@@ -99,12 +99,12 @@ else
 fi
 
 # Random Packages
-paru -S layan-gtk-theme-git --skipreview --noconfirm
-paru -S catppuccin-cursors-mocha --skipreview --noconfirm
-paru -S ksuperkey --skipreview --noconfirm
-paru -S lorien-bin --skipreview --noconfirm
-paru -S zen-browser-avx2-bin --skipreview --noconfirm
-paru -S vesktop-bin --skipreview --noconfirm
+yay -S layan-gtk-theme-git --skipreview --noconfirm
+yay -S catppuccin-cursors-mocha --skipreview --noconfirm
+yay -S ksuperkey --skipreview --noconfirm
+yay -S lorien-bin --skipreview --noconfirm
+yay -S zen-browser-avx2-bin --skipreview --noconfirm
+yay -S vesktop-bin --skipreview --noconfirm
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
