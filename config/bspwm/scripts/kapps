@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-rofi \
-    -show drun \
-	-kb-cancel Alt-F1 \
-	-theme $HOME/.config/bspwm/Purple.rasi
