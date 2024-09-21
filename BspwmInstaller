@@ -9,15 +9,15 @@ dependencias=(base-devel rustup pacman-contrib \
 			bspwm polybar sxhkd dunst rofi lsd nano \
 			git maim xdotool xdg-user-dirs lxsession-gtk3 picom ffmpeg4.4 \
 			xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
-			ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata \
 			noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 			zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
         		bluez bluez-utils blueman \
 			pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol \
 			networkmanager network-manager-applet \
-			lxappearance qt5ct papirus-icon-theme xcolor arandr brightnessctl xclip imagemagick \
-			geany nemo nemo-terminal ntfs-3g viewnior hyfetch nemo-fileroller \
-			audacity kitty spotify-launcher physlock ibus-anthy htop gparted kdenlive gimp )
+			yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zioxide imagemagick \
+			nwg-look papirus-icon-theme xcolor arandr brightnessctl xclip \
+			udiskie ntfs-3g viewnior hyfetch\
+			kitty spotify-launcher physlock ibus-anthy htop gparted vlc )
 
 is_installed() {
 	pacman -Qi "$1" &> /dev/null
@@ -86,16 +86,16 @@ fc-cache -rv >/dev/null 2>&1
 printf "%s%sFiles copied succesfully!!%s\n"
 sleep 3
 
-# Install Paru
-if ! command -v paru >/dev/null 2>&1; then
-	printf "%s%sInstalling paru%s\n"
+# Install Yay
+if ! command -v yay >/dev/null 2>&1; then
+	printf "%s%sInstalling yay%s\n"
 	cd
-	git clone https://aur.archlinux.org/paru-bin.git
-	cd paru-bin
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
 	makepkg -si --noconfirm
 	cd
 else
-	printf "%s%sParu is already installed%s\n"
+	printf "%s%sYay is already installed%s\n"
 fi
 
 # Random Packages
@@ -103,8 +103,7 @@ paru -S layan-gtk-theme-git --skipreview --noconfirm
 paru -S catppuccin-cursors-mocha --skipreview --noconfirm
 paru -S ksuperkey --skipreview --noconfirm
 paru -S lorien-bin --skipreview --noconfirm
-paru -S visual-studio-code-bin --skipreview --noconfirm
-paru -S floorp-bin --skipreview --noconfirm
+paru -S zen-browser-avx2-bin --skipreview --noconfirm
 paru -S vesktop-bin --skipreview --noconfirm
 
 #Change shell to zsh
