@@ -17,7 +17,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zioxide imagemagick \
 			nwg-look papirus-icon-theme xcolor arandr brightnessctl xclip \
 			udiskie ntfs-3g viewnior hyfetch\
-			kitty spotify-launcher physlock ibus-anthy htop gparted vlc )
+			kitty spotify-launcher physlock ibus-anthy htop gparted vlc geany)
 
 is_installed() {
 	pacman -Qi "$1" &> /dev/null
