@@ -1,7 +1,7 @@
 
 # Vars
-export VISUAL='geany'
-export EDITOR='nano'
+export VISUAL='nvim'
+export EDITOR='nvim'
 export TERMINAL='kitty'
 export BROWSER='zen-browser'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
