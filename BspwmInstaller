@@ -6,7 +6,7 @@ fi
 
 # Define packages
 dependencias=(base-devel rustup pacman-contrib \
-			bspwm polybar sxhkd dunst rofi lsd nano \
+			bspwm polybar sxhkd dunst rofi lsd \
 			git maim xdotool xdg-user-dirs lxsession-gtk3 picom ffmpeg4.4 \
 			xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
 			noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
