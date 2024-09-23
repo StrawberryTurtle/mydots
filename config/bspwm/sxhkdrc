@@ -2,28 +2,23 @@
 
 # App Menu
 alt + F1
-        rofi -show drun -kb-cancel Alt-F1 -theme $HOME/.config/bspwm/Purple.rasi
+	rofi -show drun -kb-cancel Alt-F1 -theme $HOME/.config/bspwm/Purple.rasi
 
-# Run / Window
+# Run / Window / Power Menu
 super + {r,w}
-        rofi -show {run,window} -kb-cancel Alt-F1 -theme $HOME/.config/bspwm/Purple.rasi
+	rofi -show {run,window} -kb-cancel Alt-F1 -theme $HOME/.config/bspwm/Purple.rasi
 
-# Power Menu
 super + x
-        koffee
+	koffee
 
 # Apps
-super + {l,t,d,s,z,p,m,v,b,a}
-        {lorien,tetrio-desktop,vesktop,steam,zen-browser,kolors,spotify-launcher,code,blueman-manager,pav>
-
-# Terminal Apps
-super + {h,y,Return}
-        kitty -c $HOME/.config/bspwm/kitty.conf {-e htop,-e yazi,_}
+super + {Return,z,d,a,v,t,b,s,g}
+        {kitty -c ~/.config/bspwm/kitty.conf, zen-browser, vesktop, pavucontrol, neovim, tetrio-desktop, lorien, steam, gparted} 
 
 ##---------- System ----------##
 
 # Screenshot
-alt + {_,super + ,shift + ,ctrl + } p
+super + {_,shift + ,ctrl + ,alt+ } p
 	klipper --{area,menu,now,win}
 
 # Lock Screen
@@ -39,11 +34,11 @@ XF86Audio{Mute,RaiseVolume,LowerVolume}
 	kaudio --{toggle,inc,dec}
 
 # Restart / Quit Bspwm
-ctrl + shift + {r,q}
+super + ctrl + {r,q}
 	bspc {wm -r,quit}
 	
 # Reload Keybindings
-alt + shift + r
+super + ctrl + s
 	pkill -USR1 -x sxhkd
 
 ##---------- Nodes ----------##
@@ -52,20 +47,16 @@ alt + shift + r
 super + {_,shift + } c
 	bspc node -{c,k}
 
-# Alt Close App
-alt + {_,shift + } c
-	bspc node -{c,k}
-
 # Kill Window
-ctrl + shift + Escape
+super + ctrl + Escape
     xkill
 
 # Toggle Fullscreen
-super + space
+super + f
     bspc node -t "~"fullscreen
 
 # Hide/Unhide Window
-alt + n
+super + n
 	konceal
 
 # Change Focus / Move Node Directly
@@ -73,19 +64,19 @@ alt + n
         bspc {desktop -f,node -d} '^{1-4}' '--follow'
 
 # Change Focus Local
-alt + {h,j,k,l}
-	bspc node -f {north,west,south,east} '--follow'
+super + {h,j,k,l}
+	bspc node -f {west, south, north, east} '--follow'
 
 # Change Focus Global
-{alt + m, ctrl + e}
-	bspc desktop -f next.local '--follow'
+super + {e,m}
+	bspc desktop -f {prev.local, next.local} '--follow'
 
 # Move Node Local
-alt + {y,i}
+super + {u,i}
 	bspc node -d {prev.local,next.local} '--follow'
 
-# Move Node Global
-alt + {u,o}
-	bspc node -m {prev,next} '--follow'
+# Move Node Relative
+super + {y,o}
+	bspc node -s {west, east}
 
 ##---------- EOF ----------##
