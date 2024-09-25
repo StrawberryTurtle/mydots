@@ -23,7 +23,7 @@ confirm_run() {
   fi
 }
 
-chosen="$(echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | rofi -dmenu -kb-cancel Alt-F1 -p "$prompt" -mesg "$mesg" -markup-rows -theme ${RASI})"
+chosen="$(echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | rofi -dmenu -p "$prompt" -mesg "$mesg" -markup-rows)"
 
 case ${chosen} in
 $option_1)
