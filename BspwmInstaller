@@ -16,7 +16,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			networkmanager network-manager-applet \
 			yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zioxide imagemagick viewnior \
 			neovim python-pynvim npm \
-			nwg-look papirus-icon-theme xcolor arandr brightnessctl xclip \
+			nwg-look xcolor arandr brightnessctl xclip \
 			udiskie ntfs-3g \
 			kitty hyfetch physlock ibus-anthy htop \
 			spotify-launcher gparted vlc )
@@ -59,6 +59,8 @@ clear
 [ ! -d ~/.config ] && mkdir -p ~/.config
 [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts
 
+cp -f ~/mydots/fonts/iosevka_nerd_font.ttf ~/.local/share/fonts/
+
 for archivos in ~/mydots/config/*; do
 	cp -R "${archivos}" ~/.config/
   	if [ $? -eq 0 ]; then
@@ -70,20 +72,10 @@ for archivos in ~/mydots/config/*; do
   	fi
 done
 
-for archivos in ~/mydots/fonts/*; do
-  	cp -R "${archivos}" ~/.local/share/fonts/
-  	if [ $? -eq 0 ]; then
-    		printf "%s%s%s copied succesfully!%s\n"
-    		sleep 1
-  	else
-    		printf "%s%s%s failed to copy fonts%s\n"
-    		sleep 1
-  	fi
-done
-
 cp -f "$HOME"/mydots/home/.zshrc "$HOME"
 cp -f "$HOME"/mydots/home/.xinitrc "$HOME"
 cp -f "$HOME"/mydots/home/.bashrc "$HOME"
+
 fc-cache -rv >/dev/null 2>&1
 printf "%s%sFiles copied succesfully!!%s\n"
 sleep 3
@@ -101,14 +93,13 @@ else
 fi
 
 # Random Packages
-yay -S layan-gtk-theme-git --noconfirm
 yay -S catppuccin-cursors-mocha --noconfirm
 yay -S ksuperkey --noconfirm
 yay -S lorien-bin --noconfirm
 yay -S zen-browser-avx2-bin --noconfirm
 yay -S vesktop-bin --noconfirm
-yay -S clipboard --nocomfirm
-yay -S vim-plug --nocomfirm
+yay -S clipboard --noconfirm
+yay -S tokyonight-gtk-theme-git --noconfirm
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
