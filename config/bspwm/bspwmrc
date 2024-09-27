@@ -54,11 +54,12 @@ killall -9 sxhkd dunst ksuperkey polybar picom
 picom &
 sxhkd &
 dunst &
-autohide_polybar &
 
 for mon in $(polybar --list-monitors | cut -d":" -f1); do
   MONITOR=$mon polybar -q main &
 done
+
+polybar-msg cmd hide
 
 ksuperkey -e 'Super_L=Alt_L|F1'
 ksuperkey -e 'Super_R=Alt_L|F1'
