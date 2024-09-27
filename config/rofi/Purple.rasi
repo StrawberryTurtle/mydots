@@ -1,6 +1,6 @@
 * {
     selected-normal-foreground:  rgba ( 2, 20, 63, 100 % );
-    foreground:                  rgba ( 203, 166, 247, 100 % );
+    foreground:                  rgba ( 180, 190, 254, 100% );
     normal-foreground:           rgba ( 220, 220, 220, 100 % );
     alternate-normal-background: rgba ( 0, 0, 0, 0 % );
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -17,10 +17,10 @@
     alternate-normal-foreground: rgba ( 220, 220, 220, 100 % );
     normal-background:           rgba ( 0, 0, 208, 0 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 203, 166, 247, 60 % );
+    selected-normal-background:  rgba ( 180, 190, 254, 60 % );
     border-color:                @foreground;
     spacing:                     2;
-    separatorcolor:              rgba ( 203, 166, 247, 100 % );
+    separatorcolor:              rgba ( 180, 190, 254, 100 % );
     urgent-background:           rgba ( 0, 0, 208, 0 % );
     selected-urgent-background:  rgba ( 255, 129, 127, 100 % );
     alternate-urgent-foreground: @urgent-foreground;
