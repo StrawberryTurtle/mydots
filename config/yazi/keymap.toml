@@ -8,7 +8,7 @@ prepend_keymap = [
 
 	{ on = "<y>", run = ['''shell 'cb copy "$@"' --confirm''', "yank"] },
 	{ on = "<C-p>", run = ['''shell 'cb paste > "Name${EPOCHREALTIME/[^0-9]/}"' --confirm''']},
-	{ on = "<C-r>", run = [ ''' shell 'mv $0 "$0.$(file -b --extension $0)"' --confirm'''] },
+	{ on = "<C-e>", run = [ ''' shell 'mv $0 "$0.$(file -b --extension $0)"' --confirm'''] },
 ]
 
 keymap = [
