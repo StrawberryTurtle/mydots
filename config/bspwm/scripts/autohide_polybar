@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+BARHEIGHT=$((20))                          #polybar/config.ini ---- height
+PADDING=$((2))                             #bspwm/bspwmrc ---- window_gap
+eval $(xdotool getdisplaygeometry --shell) #Pipes display width and height to $WIDTH and $HEIGHT
+
+polybar-msg cmd hide
+bspc config bottom_padding $PADDING
+
+while :; do
+  sleep 0.25
+  eval $(xdotool getmouselocation --shell)
+  if [[ $((Y)) == $(($HEIGHT - 1)) ]]; then
+    polybar-msg cmd show
+    while [[ $((Y)) -ge $(($HEIGHT - $BARHEIGHT)) ]]; do
+      sleep 0.15
+      eval $(xdotool getmouselocation --shell)
+    done
+    polybar-msg cmd hide
+    bspc config bottom_padding $PADDING
+  fi
+done
