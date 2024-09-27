@@ -4,12 +4,12 @@ prompt="Powermenu"
 mesg="Uptime : $(uptime -p | sed -e 's/up //g')"
 
 layout=$(cat ${RASI} | cut -d'=' -f2)
-option_1="Lock"
-option_2="Logout"
-option_3="Suspend"
-option_4="Hibernate"
-option_5="Reboot"
-option_6="Shutdown"
+option_1="1 lock"
+option_2="2 logout"
+option_3="3 suspend"
+option_4="4 hibernate"
+option_5="5 reboot"
+option_6="6 shutdown"
 
 yes='Yes'
 no='No'
