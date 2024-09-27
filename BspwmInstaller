@@ -18,7 +18,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			neovim python-pynvim npm \
 			nwg-look xcolor arandr brightnessctl xclip feh \
 			udiskie ntfs-3g \
-			kitty hyfetch physlock ibus-anthy htop \
+			kitty hyfetch physlock ibus-anthy htop ly \
 			spotify-launcher gparted vlc )
 
 is_installed() {
@@ -100,6 +100,9 @@ yay -S zen-browser-avx2-bin --noconfirm
 yay -S vesktop-bin --noconfirm
 yay -S clipboard --noconfirm
 yay -S tokyonight-gtk-theme-git --noconfirm
+
+systemctl enable ly.service
+systemctl enable bluetooth.service
 
 #Change shell to zsh
 printf "%s%sIf your shell is not zsh will be changed now.\nYour root password is needed to make the change.\n\nAfter that is important for you to reboot.\n %s\n"
