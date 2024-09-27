@@ -13,8 +13,8 @@ super + x
 	koffee
 
 # Apps
-super + {Return,z,d,a,v,t,b,s,g}
-        {kitty, zen-browser, vesktop, pavucontrol, neovim, tetrio-desktop, lorien, steam, gparted} 
+super + {Return,z,d,a,t,v,b,s,g}
+        {kitty, zen-browser, vesktop, pavucontrol, tetrio-desktop --in-process-gpu, kitty -e nvim, blueman-manager, steam, godot} 
 
 ##---------- System ----------##
 
