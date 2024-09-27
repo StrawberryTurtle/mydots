@@ -18,7 +18,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			neovim python-pynvim npm \
 			nwg-look xcolor arandr brightnessctl xclip feh \
 			udiskie ntfs-3g \
-			kitty hyfetch physlock ibus-anthy htop ly \
+			kitty hyfetch physlock ibus-anthy htop \
 			spotify-launcher gparted vlc )
 
 is_installed() {
@@ -101,7 +101,6 @@ yay -S vesktop-bin --noconfirm
 yay -S clipboard --noconfirm
 yay -S tokyonight-gtk-theme-git --noconfirm
 
-systemctl enable ly.service
 systemctl enable bluetooth.service
 
 #Change shell to zsh
