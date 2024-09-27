@@ -60,6 +60,7 @@ for mon in $(polybar --list-monitors | cut -d":" -f1); do
 done
 
 polybar-msg cmd hide
+bspc config bottom_padding 0
 
 ksuperkey -e 'Super_L=Alt_L|F1'
 ksuperkey -e 'Super_R=Alt_L|F1'
