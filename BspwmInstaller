@@ -16,7 +16,7 @@ dependencias=(base-devel rustup pacman-contrib \
 			networkmanager network-manager-applet \
 			yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zioxide imagemagick viewnior \
 			neovim python-pynvim npm \
-			nwg-look xcolor arandr brightnessctl xclip \
+			nwg-look xcolor arandr brightnessctl xclip feh \
 			udiskie ntfs-3g \
 			kitty hyfetch physlock ibus-anthy htop \
 			spotify-launcher gparted vlc )
