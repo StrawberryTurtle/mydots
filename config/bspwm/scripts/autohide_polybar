@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sleep 1
+
 BARHEIGHT=$((20))                          #polybar/config.ini ---- height
 eval $(xdotool getdisplaygeometry --shell) #Pipes display width and height to $WIDTH and $HEIGHT
 
