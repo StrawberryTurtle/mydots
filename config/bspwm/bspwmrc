@@ -14,9 +14,10 @@ for monitor in `xrandr -q | grep -w 'connected' | cut -d' ' -f1`; do
 done
 
 #laptop EXAMPLE
-#  xrandr --output eDP-1 --primary --mode 2560x1600 --rate 60
-#  bspc monitor -n eDP-1 -d '1' '2' '3'
-#  bspc wm -O eDP-1
+#  xrandr --output eDP-1 --primary --mode 1920x1200 --output HDMI-A-1-0 --mode 1920x1080 --rate 60 --right-of eDP-1
+#  bspc wm -O eDP-1 HDMI-A-1-0
+#  bspc monitor -n eDP-1 -d 1 2 3
+#  bspc monitor -n HDMI-A-1-0 -d 1
 
 #Desktop EXAMPLE
 #  xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 ->
@@ -49,11 +50,14 @@ bspc rule -a Viewnior state=floating follow=on focus=on
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
-killall -9 sxhkd dunst ksuperkey polybar picom
+killall -9 sxhkd dunst picom polybar ksuperkey
 
-picom &
+sleep 0.1
+
 sxhkd &
 dunst &
+picom &
+#  polybar &
 
 for mon in $(polybar --list-monitors | cut -d":" -f1); do
   MONITOR=$mon polybar -q main &
@@ -61,8 +65,9 @@ done
 
 sleep 0.1
 
-polybar-msg cmd hide
-bspc config bottom_padding 0
+#  Autohide
+#  polybar-msg cmd hide
+#  bspc config bottom_padding 0
 
 ksuperkey -e 'Super_L=Alt_L|F1'
 ksuperkey -e 'Super_R=Alt_L|F1'
