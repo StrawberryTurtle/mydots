@@ -5,21 +5,17 @@ if [ "$(id -u)" = 0 ]; then
 fi
 
 # Define packages
-dependencias=(base-devel rustup pacman-contrib \
-			bspwm polybar sxhkd dunst rofi lsd \
-			git maim xdotool xdg-user-dirs lxsession-gtk3 picom ffmpeg4.4 \
-			xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server \
-			noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-			zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
-        		bluez bluez-utils blueman \
-			pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol \
-			networkmanager network-manager-applet \
-			yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf zioxide imagemagick viewnior \
-			neovim python-pynvim npm \
-			nwg-look xcolor arandr brightnessctl xclip feh \
-			udiskie ntfs-3g \
-			kitty hyfetch physlock ibus-anthy htop \
-			spotify-launcher gparted vlc )
+dependencias=(	base-devel rustup pacman-contrib \
+		bspwm polybar sxhkd dunst rofi picom lsd \
+		git maim xdotool xdg-user-dirs lxsession-gtk3 \
+		xorg-xkill xorg-xsetroot xorg-xwininfo xorg-xrandr xorg-xinit xorg-server xclip xcolor \
+		noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+		zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
+        	bluez-utils blueman network-manager-applet udiskie ntfs-3g \
+		pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pulsemixer pavucontrol ffmpeg4.4 \
+		yazi ffmpegthumbnailer p7zip jq poppler fd ripgrep fzf imagemagick viewnior \
+		neovim kitty hyfetch physlock ibus-anthy htop \
+		nwg-look xcolor arandr brightnessctl spotify-launcher )
 
 is_installed() {
 	pacman -Qi "$1" &> /dev/null
