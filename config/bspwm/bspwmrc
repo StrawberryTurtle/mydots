@@ -14,10 +14,10 @@ for monitor in `xrandr -q | grep -w 'connected' | cut -d' ' -f1`; do
 done
 
 #laptop EXAMPLE
-#  xrandr --output eDP-1 --primary --mode 1920x1200 --output HDMI-A-1-0 --mode 1920x1080 --rate 60 --right-of eDP-1
-#  bspc wm -O eDP-1 HDMI-A-1-0
-#  bspc monitor -n eDP-1 -d 1 2 3
-#  bspc monitor -n HDMI-A-1-0 -d 1
+# xrandr --output eDP-1 --primary --mode 1920x1200 --output HDMI-A-1-0 --mode 1920x1080 --rate 60 --right-of eDP-1
+# bspc wm -O eDP-1 HDMI-A-1-0
+# bspc monitor eDP-1 -d 1 2 3
+# bspc monitor HDMI-A-1-0 -d 1
 
 #Desktop EXAMPLE
 #  xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 165 --output DisplayPort-2 --mode 1920x1080 ->
@@ -75,5 +75,3 @@ ksuperkey -e 'Super_R=Alt_L|F1'
 xsetroot -cursor_name left_ptr
 
 nm-applet &
-
-feh --bg-scale ~/.config/bspwm/wallpapers/cherry_blossom_lava.jpg
